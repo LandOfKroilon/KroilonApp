@@ -18,11 +18,19 @@ Meteor.methods({
 
     },    
 
+<<<<<<< HEAD
     deleteScore: function (id, playerId, activity ) {
 
       Academy.update(
           { _id: id, 'users.nb': playerId},
           {$pull: {'users.$.score': activity}}
+=======
+    deleteScore: function (id, playerId, scoreDate, ) {
+
+      Academy.update(
+          { _id: id, 'users.nb': playerId},
+          {$pull: {'users.$.score': {date: scoreDate}}}
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
       );
     },
 
@@ -36,11 +44,19 @@ Meteor.methods({
 
     },
 
+<<<<<<< HEAD
     deleteTeamScore: function (id, activity) {
       var currentUserId = Meteor.userId();
       Academy.update(
           { _id: id },
           {$pull: {'teamScore': activity}},
+=======
+    deleteTeamScore: function (id, scoreDate) {
+      var currentUserId = Meteor.userId();
+      Academy.update(
+          { _id: id },
+          {$pull: {'teamScore': {date: scoreDate}}},
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
           {updatedBy: currentUserId}
       );
 

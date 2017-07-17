@@ -81,10 +81,17 @@ Template.Map.helpers({
 
         });
 
+<<<<<<< HEAD
         //let average_team_points = (total_team_points / total_team_score);
   		//console.log("average_team_points: " + average_team_points);
 
         return parseInt(average_points + total_team_points);
+=======
+        let average_team_points = (total_team_points / total_team_score);
+        //console.log("average_team_points: " + average_team_points);
+
+        return parseInt(average_points + average_team_points);
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 
     },
 	currentRoomBadges() {
@@ -155,6 +162,7 @@ Template.Map.helpers({
 
 		return decision;
 	},
+<<<<<<< HEAD
 	currentRoom() {
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
 		var currentRoom = latestAcademy.currentRoom; 
@@ -162,6 +170,8 @@ Template.Map.helpers({
 
 		return currentRoom;
 	},
+=======
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	roomDescription() {
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
 		var currentRoom = latestAcademy.currentRoom; 

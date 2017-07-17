@@ -13,6 +13,7 @@ db.challenges.drop();
 db.createCollection("activities");
 db.activities.insert([
 	{
+<<<<<<< HEAD
 		"name": "1º lugar no Divide & Conquer",
 	    "points": "600",
 	    "pointsType": "XP",
@@ -317,5 +318,117 @@ db.activities.insert([
 	    "points": "50",
 	    "pointsType": "XP",
 	    "description": ""    
+=======
+		"name": "Avatar",
+		"points": 50,
+		"pointsType": "HP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Autoevaluation",
+		"points": 50,
+		"pointsType": "KP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Kahoot",
+		"points": 50,
+		"pointsType": "KP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Volunteer Medley",
+		"points": 50,
+		"pointsType": "HP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Volunteer Android",
+		"points": 50,
+		"pointsType": "HP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Volunteer LipSync Battle",
+		"points": 50,
+		"pointsType": "HP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Team Balance",
+		"points": 200,
+		"pointsType": "TP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Marshmallow Ladder",
+		"points": 400,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Ninja MF Winner",
+		"points": 25,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Daily Scrum",
+		"points": 50,
+		"pointsType": "TP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Chain of Claws",
+		"points": 400,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Landing Project",
+		"points": 400,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Blind Quest",
+		"points": 200,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Wells & Cans",
+		"points": 600,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Lunch",
+		"points": 400,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+	},
+	{
+		"name": "Divide & Conquer",
+		"points": 500,
+		"pointsType": "XP",
+		"room": "",
+		"description": ""
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	}
 ]);

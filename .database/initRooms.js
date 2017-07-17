@@ -14,6 +14,7 @@ db.createCollection("rooms");
 db.rooms.insert([
 	{
 		"name": "Cockroach Entry",
+<<<<<<< HEAD
 	    "dailyDecision": "Move forward",
 	    "description": "Autoavaliação (-50 KP)\nAvatar + EXCEL (-50 HP)\n\nSegredos: 200 HP\nDaily kahoot: 100 / 50 / 25 KP\nPontualidade: +/-50 PE / -10 HP\nNinjamotherfucker 50 XP\nTeam balance: 200 PE\nMarshmallow challenge: 400 XP\nUnlock BOAT badge (+ 50% das equipas >30cm) \nTeam leader: 50 HP",
 	    "image": null,
@@ -49,6 +50,43 @@ db.rooms.insert([
 	    "badges": [
 	        {}
 	    ]
+=======
+		"dailyDecision":"Cockroach Entry decision...",
+		"description": "Cockroach Entry room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{}
+			]
+	},
+	{
+		"name": "Project Room",
+		"dailyDecision":"Project Room decision...",
+		"description": "Project Room room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "BOAT",
+				"locked": true
+			},
+			{
+				"name": "DOUBLE",
+				"locked": true
+			},
+			{
+				"name": "MYSTERY",
+				"locked": true
+			}
+			]
+	},
+	{
+		"name": "Wandering Wall",
+		"dailyDecision":"Wandering Wall decision...",
+		"description": "Wandering Wall room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{}
+			]
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	},
 	{
 		"name": "Nowayout Corridor",
@@ -70,6 +108,7 @@ db.rooms.insert([
 	},
 	{
 		"name": "Adolph Room",
+<<<<<<< HEAD
 	    "dailyDecision": "Move forward",
 	    "description": " ",
 	    "image": null,
@@ -131,6 +170,77 @@ db.rooms.insert([
 	    "badges": [
 	        {}
 	    ]
+=======
+		"dailyDecision":"Adolph Room decision...",
+		"description": "Adolph Room room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "BOAT",
+				"locked": true
+			}
+			]
+	},
+	{
+		"name": "Stormilor Hall",
+		"dailyDecision":"Stormilor Hall decision...",
+		"description": "Stormilor Hall room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "SWORD",
+				"locked": true
+			}
+			]
+	},
+	{
+		"name": "Diaz Krez Arena",
+		"dailyDecision":"Diaz Krez Arena decision...",
+		"description": "Diaz Krez Arena room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "FOOD",
+				"locked": false
+			}
+			]
+	},
+	{
+		"name": "Kalu Hall",
+		"dailyDecision":"Kalu Hall decision...",
+		"description": "Kalu Hall room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "FOOD",
+				"locked": false
+			}
+			]
+	},
+	{
+		"name": "Ristar Room",
+		"dailyDecision":"Ristar Room decision...",
+		"description": "Ristar Room room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "FOOD",
+				"locked": false
+			}
+			]
+	},
+	{
+		"name": "Stormillor Dungeon",
+		"dailyDecision":"Stormillor Dungeon decision...",
+		"description": "Stormillor Dungeon room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "MYSTERY",
+				"locked": true
+			}
+			]
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	},
 	{
 		"name": "Normingor Room A",
@@ -155,6 +265,7 @@ db.rooms.insert([
 	},
 	{
 		"name": "Normingor Room B",
+<<<<<<< HEAD
 	    "dailyDecision": "Diktaur Room vs. Almusther Room vs. Performanthor Room",
 	    "description": "Daily kahoot: 100/50/25 KP\nDaily ninja: -25 HP/50 XP\nDaily scrum: 2 x 25 PE\n\nTodos a horas: +50 PE\n5 ou mais atrasos: -50 PE\n1 atraso: -10 HP\n\nDivide & conquer: 400 XP",
 	    "image": null,
@@ -182,5 +293,34 @@ db.rooms.insert([
 	    "badges": [
 	        {}
     	]
+=======
+		"dailyDecision":"Normingor Room B decision...",
+		"description": "Normingor Room B room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{}
+			]
+	},
+	{
+		"name": "Almusther Room",
+		"dailyDecision":"Almusther Room decision...",
+		"description": "Almusther Room room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{
+				"name": "FOOD",
+				"locked": false
+			}
+			]
+	},
+	{
+		"name": "Performanthor Room",
+		"dailyDecision":"Performanthor Room decision...",
+		"description": "Performanthor Room room description HERE...",
+		"image":"/roomImages/imageRoomExample.jpg",
+		"badges": [
+			{}
+			]
+>>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	}
 ]);
