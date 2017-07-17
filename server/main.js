@@ -16,21 +16,13 @@ Meteor.methods({
           {updatedBy: currentUserId}
       );
 
-    },    
+    },
 
-<<<<<<< HEAD
-    deleteScore: function (id, playerId, activity ) {
-
-      Academy.update(
-          { _id: id, 'users.nb': playerId},
-          {$pull: {'users.$.score': activity}}
-=======
     deleteScore: function (id, playerId, scoreDate, ) {
 
       Academy.update(
           { _id: id, 'users.nb': playerId},
           {$pull: {'users.$.score': {date: scoreDate}}}
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
       );
     },
 
@@ -44,19 +36,11 @@ Meteor.methods({
 
     },
 
-<<<<<<< HEAD
-    deleteTeamScore: function (id, activity) {
-      var currentUserId = Meteor.userId();
-      Academy.update(
-          { _id: id },
-          {$pull: {'teamScore': activity}},
-=======
     deleteTeamScore: function (id, scoreDate) {
       var currentUserId = Meteor.userId();
       Academy.update(
           { _id: id },
           {$pull: {'teamScore': {date: scoreDate}}},
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
           {updatedBy: currentUserId}
       );
 
@@ -109,7 +93,7 @@ Meteor.methods({
       console.log(data);
 
       Academy.insert(data);
-      
+
     },
 
     removeAcademy : function(id) {
@@ -117,7 +101,7 @@ Meteor.methods({
       Academy.remove(
           { _id: id }
       );
-            
+
     },
 
 	  deleteCharacter: function (id,playerId) {
@@ -159,7 +143,7 @@ Meteor.methods({
 		updateDailyMessage : function(latestAcademy, message)	{
 			Academy.update({_id: latestAcademy._id}, {$set :{'dailyMessage' : message }});
 		},
-		
+
     terminateDay : function(latestAcademy) {
 			var energyLevel = parseInt(latestAcademy.energyLevel) - 1;
 
@@ -193,7 +177,7 @@ Meteor.methods({
       Academy.update({_id: id}, {$set :{'date' : new Date() }});
     },
 
-    updateBadgeStatus : function( roomName, badgeName, newStatus) {      
+    updateBadgeStatus : function( roomName, badgeName, newStatus) {
       Rooms.update({_id: roomName._id, 'badges.name': badgeName}, { $set:{'badges.$.locked': newStatus }} );
     },
 
@@ -232,11 +216,11 @@ Meteor.methods({
       Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.voted': status}} );
     },
 
-    updateUserThatVoted : function( academy, user, votedFor) {      
+    updateUserThatVoted : function( academy, user, votedFor) {
       Academy.update( { _id: academy._id, 'users.nb': user.nb}, { $set: {'users.$.voted': votedFor } });
-    },   
+    },
 
-    updateVotedCounter : function( academy, votedFor) {      
+    updateVotedCounter : function( academy, votedFor) {
       Academy.update( { _id: academy._id, 'users.nb': votedFor}, { $inc:{"users.$.counter": 1 } });
     },
 
@@ -298,27 +282,27 @@ Meteor.methods({
 
     updatePlayerSkillsPeople: function( academy, nb, people) {
       //console.log("academyID: " + academy._id);
-      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.people': people}} ); 
+      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.people': people}} );
     },
 
     updatePlayerSkillsCommunication: function( academy, nb, communication) {
       //console.log("academyID: " + academy._id);
-      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.communication': communication}} ); 
+      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.communication': communication}} );
     },
 
     updatePlayerSkillsProblemSolving: function( academy, nb, problemSolving) {
       //console.log("academyID: " + academy._id);
-      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.problemSolving': problemSolving}} ); 
+      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.problemSolving': problemSolving}} );
     },
 
     updatePlayerSkillsManagement: function( academy, nb, management) {
       //console.log("academyID: " + academy._id);
-      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.management': management}} ); 
+      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.management': management}} );
     },
 
     updatePlayerSkillsAndroid: function( academy, nb, android) {
       //console.log("academyID: " + academy._id);
-      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.android': android}} ); 
+      Academy.update( { _id: academy._id, 'users.nb': nb}, { $set: {'users.$.skills.0.android': android}} );
     },
 
     deleteAllSecrets : function() {

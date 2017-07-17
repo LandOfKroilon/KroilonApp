@@ -8,12 +8,10 @@ Template.MainNav.events({
 	'click .logout': () => {
 		Session.set("loggedUser", '');
 	}
-<<<<<<< HEAD
-})
-=======
+
 });
 
-    
+
 	/*Menu-toggle*/
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -34,7 +32,7 @@ Template.MainNav.events({
 			$('html').height(Math.max(height1,height3,height2));
 			$('body').height(Math.max(height1,height3,height2));
 		}
-		
+
 	}
 	$(document).ready(function () {
 		htmlbodyHeightUpdate()
@@ -46,4 +44,3 @@ Template.MainNav.events({
   			htmlbodyHeightUpdate()
 		});
 	});
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298

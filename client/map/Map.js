@@ -12,13 +12,13 @@ Template.Map.helpers({
 
 		var img_energyLevel = "/energyLevels/energyLevels_5.png";
 
-		switch(energy_level) {	
+		switch(energy_level) {
 			case -2:
 				img_energyLevel = "/energyLevels/energyLevels_0.png";
 				break;
 			case -1:
 				img_energyLevel = "/energyLevels/energyLevels_0.png";
-				break;		
+				break;
 			case 0:
 				img_energyLevel = "/energyLevels/energyLevels_0.png";
 				break;
@@ -36,7 +36,7 @@ Template.Map.helpers({
 				break;
 			case 5:
 				img_energyLevel = "/energyLevels/energyLevels_5.png";
-				break;			
+				break;
 			default:
 				img_energyLevel = "/energyLevels/energyLevels_5.png";
 				break;
@@ -81,24 +81,16 @@ Template.Map.helpers({
 
         });
 
-<<<<<<< HEAD
-        //let average_team_points = (total_team_points / total_team_score);
-  		//console.log("average_team_points: " + average_team_points);
-
-        return parseInt(average_points + total_team_points);
-=======
         let average_team_points = (total_team_points / total_team_score);
         //console.log("average_team_points: " + average_team_points);
 
         return parseInt(average_points + average_team_points);
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
-
     },
 	currentRoomBadges() {
 
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
-		var currentRoom = latestAcademy.currentRoom; 
-		//console.log("CurrentRoom: " + currentRoom);		
+		var currentRoom = latestAcademy.currentRoom;
+		//console.log("CurrentRoom: " + currentRoom);
 
 		var mapRoom = Rooms.find({'name': currentRoom }).fetch();
 
@@ -106,16 +98,16 @@ Template.Map.helpers({
 
 		mapRoom[0].badges.forEach( function(badges){
 
-			var badgeName = badges.name; 
+			var badgeName = badges.name;
 			//console.log("BadgeName: " + badgeName);
 
 			var badge = Badges.find({'name': badgeName }, {"name" : 1, "locked" : 1}).fetch();
-			var badgeImage = badge[0].image; 
-			//console.log("BadgeImage: " + badgeImage);		
+			var badgeImage = badge[0].image;
+			//console.log("BadgeImage: " + badgeImage);
 			var badgeStatus = "";
 			//console.log("badgelocked: " + badges.locked);
 
-			if (badges.locked === true) { 
+			if (badges.locked === true) {
 				badgeStatus = "Locked";
 				console.log("badgeStatus: " + badgeStatus);
 			} else {
@@ -125,35 +117,35 @@ Template.Map.helpers({
 
 			var newBadge = {'name': badgeName, 'image': badgeImage, 'status': badgeStatus };
 			roomBadges.push(newBadge);
-		});		
+		});
 
 		return roomBadges;
-	},	
+	},
 	badgeGandalfLocked() {
-	    
+
 		var secrets = Secrets.find({'discovered': true}).count() < 3;
 		//console.log("Secrets discovered: " + secrets);
-	    return secrets; 
+	    return secrets;
 	},
 	message() {
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
 
 		return latestAcademy.dailyMessage;
 
-	},	
+	},
 	decisionExists() {
 	    var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
-		var currentRoom = latestAcademy.currentRoom; 
+		var currentRoom = latestAcademy.currentRoom;
 		//console.log("CurrentRoom: " + currentRoom);
 	    var mapRoom = Rooms.find({'name': currentRoom }).fetch();
 		var decision = mapRoom[0].dailyDecision;
 	    //console.log("DecisionExists: " + decision);
 
-	    return decision; 
+	    return decision;
 	},
 	dailyDecision() {
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
-		var currentRoom = latestAcademy.currentRoom; 
+		var currentRoom = latestAcademy.currentRoom;
 		//console.log("CurrentRoom: " + currentRoom);
 
 		var mapRoom = Rooms.find({'name': currentRoom }).fetch();
@@ -162,19 +154,10 @@ Template.Map.helpers({
 
 		return decision;
 	},
-<<<<<<< HEAD
-	currentRoom() {
-		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
-		var currentRoom = latestAcademy.currentRoom; 
-		//console.log("CurrentRoom: " + currentRoom);
 
-		return currentRoom;
-	},
-=======
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
 	roomDescription() {
 		var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
-		var currentRoom = latestAcademy.currentRoom; 
+		var currentRoom = latestAcademy.currentRoom;
 		//console.log("CurrentRoom: " + currentRoom);
 
 		var mapRoom = Rooms.find({'name': currentRoom }).fetch();
@@ -204,11 +187,11 @@ Template.Map.helpers({
 });
 
  /*
-Template.Map.events({  
+Template.Map.events({
 
-  'click .roomPolygon' (event){   
+  'click .roomPolygon' (event){
   	event.preventDefault();
-  	//console.log("Room: " + event.currentTarget.id); 
+  	//console.log("Room: " + event.currentTarget.id);
 
   	var rooms = new Array();
     var roomName = event.currentTarget.id;
@@ -221,10 +204,10 @@ Template.Map.events({
     var newRoom = { 'name': room[0].name, 'image': room[0].image, 'description': room[0].description };
     rooms.push(newRoom);
 
-    Modal.show('showRoomInfoModal', rooms);	
+    Modal.show('showRoomInfoModal', rooms);
   },
-   
-  'click .badgePolygon' (event){   
+
+  'click .badgePolygon' (event){
   	event.preventDefault();
   	//console.log("Badge: " + event.currentTarget.id);
 
@@ -239,9 +222,9 @@ Template.Map.events({
     var newBadge = { 'name': badge[0].name, 'image': badge[0].image, 'description': badge[0].description };
     badges.push(newBadge);
 
-    Modal.show('showBadgeInfoModal', badges);	
+    Modal.show('showBadgeInfoModal', badges);
   }
-  
-  
+
+
 });
 */

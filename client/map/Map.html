@@ -1,31 +1,31 @@
 <template name="Map">
-  <div class="container"> 
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-8" >
             <svg id="mysvg" onload="init(evt)">
-	<!--  ROOMS -->	  
+	<!--  ROOMS -->
 	<!-- COCKROACH ENTRY -->
   <polygon id="Cockroach Entry" class="roomPolygon" points="203,166 265,139 288,191 223,217" style="fill:transparent;" onmousemove="ShowTooltip(evt, 'Cockroach Entry')" onmouseout="HideTooltip()"/>
-	
+
 	<!-- PROJECT ROOM -->
-	<polygon id="Project Room" class="roomPolygon" points="290,134 367,130 374,194 293,195" style="fill:transparent;" 
+	<polygon id="Project Room" class="roomPolygon" points="290,134 367,130 374,194 293,195" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Project Room')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- WANDERING WALL -->
 	<circle id="Wandering Wall" class="roomPolygon" r="27" cx="463" cy="173" style="fill:transparent;" onmousemove="ShowTooltip(evt, 'Wandering Wall')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- ADOLPH ROOM -->
 	<polygon id="Adolph Room" class="roomPolygon" points="495,75 577,104 521,145 475,118" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Adolph Room')" onmouseout="HideTooltip()"/>
 
 	<!-- STORMILOR HALL -->
-	<polygon id="Stormilor Hall" class="roomPolygon" points="578,103 617,205 557,218 521,145" style="fill:transparent;" 
+	<polygon id="Stormilor Hall" class="roomPolygon" points="578,103 617,205 557,218 521,145" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Stormilor Hall')" onmouseout="HideTooltip()"/>
 
 	<!-- DIAZ KREZ ARENA -->
-	<ellipse id="Diaz Krez Arena" class="roomPolygon" cx="664" cy="183" rx="37.1" ry="53" style="fill:transparent;" 
+	<ellipse id="Diaz Krez Arena" class="roomPolygon" cx="664" cy="183" rx="37.1" ry="53" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Diaz Krez Arena')" onmouseout="HideTooltip()"/>
 
     <!-- KALU HALL -->
@@ -36,61 +36,61 @@
 
 	<!-- RISTAR ROOM -->
 	<polygon id="Ristar Room" class="roomPolygon" points="475,244 541,270 576,303 571,325 457,290" style="fill:transparent;" onmousemove="ShowTooltip(evt, 'Ristar Room')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- STORMILLOR DUNGEON -->
-	<polygon id="Stormillor Dungeon" class="roomPolygon" points="577,303 627,286 647,375 572,325" style="fill:transparent;" 
+	<polygon id="Stormillor Dungeon" class="roomPolygon" points="577,303 627,286 647,375 572,325" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Stormillor Dungeon')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- DIKTAUR ROOM -->
-	<polygon id="Diktaur Room" class="roomPolygon" points="405,268 456,291 425,388 393,327" style="fill:transparent;" 
+	<polygon id="Diktaur Room" class="roomPolygon" points="405,268 456,291 425,388 393,327" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Diktaur Room')" onmouseout="HideTooltip()"/>
 
 	<!-- NORMINGOR ROOM B -->
-	<polygon id="Normingor Room B" class="roomPolygon" points="457,291 571,326 555,385 437,350" style="fill:transparent;" 
+	<polygon id="Normingor Room B" class="roomPolygon" points="457,291 571,326 555,385 437,350" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Normingor Room B')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- PERFORMANTHOR ROOM -->
-	<polygon id="Performanthor Room" class="roomPolygon" points="437,351 555,386 575,421 426,388" style="fill:transparent;" 
+	<polygon id="Performanthor Room" class="roomPolygon" points="437,351 555,386 575,421 426,388" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Performanthor Room')" onmouseout="HideTooltip()"/>
-		
+
 	<!-- ALMUSTHER ROOM -->
-	<polygon id="Almusther Room" class="roomPolygon" points="572,326 647,376 576,421 556,386" style="fill:transparent;" 
+	<polygon id="Almusther Room" class="roomPolygon" points="572,326 647,376 576,421 556,386" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Almusther Room')" onmouseout="HideTooltip()"/>
 
 	<!-- BADGES -->
-	<circle id="BOAT" class="badgePolygon" r="15" cx="357" cy="190" style="fill:transparent;" 
+	<circle id="BOAT" class="badgePolygon" r="15" cx="357" cy="190" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Boat unlock spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="BOAT" class="badgePolygon" r="15" cx="555" cy="95" style="fill:transparent;" 
+
+	<circle id="BOAT" class="badgePolygon" r="15" cx="555" cy="95" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Boat unlock spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="SWORD" class="badgePolygon" r="15" cx="610" cy="185" style="fill:transparent;" 
+
+	<circle id="SWORD" class="badgePolygon" r="15" cx="610" cy="185" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Attackers unlock spot')" onmouseout="HideTooltip()"/>
-	
+
 	<circle id="DOUBLE" class="badgePolygon" r="15" cx="527" cy="240" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Double points spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="DOUBLE" class="badgePolygon" r="15" cx="420" cy="347" style="fill:transparent;" 
+
+	<circle id="DOUBLE" class="badgePolygon" r="15" cx="420" cy="347" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Double points spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="MYSTERY" class="badgePolygon" r="15" cx="310" cy="361" style="fill:transparent;" 
+
+	<circle id="MYSTERY" class="badgePolygon" r="15" cx="310" cy="361" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Mystery spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="MYSTERY" class="badgePolygon" r="15" cx="648" cy="341" style="fill:transparent;" 
+
+	<circle id="MYSTERY" class="badgePolygon" r="15" cx="648" cy="341" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Mystery spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="FOOD" class="badgePolygon" r="15" cx="671" cy="151" style="fill:transparent;" 
+
+	<circle id="FOOD" class="badgePolygon" r="15" cx="671" cy="151" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Food spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="FOOD" class="badgePolygon" r="15" cx="615" cy="271" style="fill:transparent;" 
+
+	<circle id="FOOD" class="badgePolygon" r="15" cx="615" cy="271" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Food spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="FOOD" class="badgePolygon" r="15" cx="545" cy="302" style="fill:transparent;" 
+
+	<circle id="FOOD" class="badgePolygon" r="15" cx="545" cy="302" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Food spot')" onmouseout="HideTooltip()"/>
-	
-	<circle id="FOOD" class="badgePolygon" r="15" cx="625" cy="392" style="fill:transparent;" 
+
+	<circle id="FOOD" class="badgePolygon" r="15" cx="625" cy="392" style="fill:transparent;"
 	onmousemove="ShowTooltip(evt, 'Food spot')" onmouseout="HideTooltip()"/>
-	
+
 	<rect class="tooltip_bg" id="tooltip_bg" x="0" y="0" rx="4" ry="4" width="52" height="16" visibility="hidden"/>
 	<text  id="tooltip" x="0" y="0" visibility="hidden">Cockroach Entry</text>
 </svg>
@@ -101,7 +101,7 @@
                 <h3 style="font-size: 2.3em; font-weight: 201;">In the Land of Kroilon</h3>
               </div>
             </div>
-<<<<<<< HEAD
+
             <!--
             <div class="row">
               <div class="col-md-12">
@@ -118,16 +118,11 @@
               </div>
             </div>
           -->
-            <div class="row">
-              <div class="col-md-12">
-                <p class="lead" style="margin-top: 0.0em; margin-bottom: 0.5em; white-space: nowrap;">
-                  {{currentRoom}} / <span style="font-weight: 201;">{{currentDay}}</span>
-=======
+
             <div class="row">
               <div class="col-md-12">
                 <p class="lead" style="margin-top: 0.0em; white-space: nowrap;">
                   Game Dashboard / <span style="font-weight: 201;">{{currentDay}}</span>
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
                 </p>
               </div>
             </div>
@@ -138,7 +133,7 @@
                     <h4 style="margin-bottom: 0.0em"><b>SCORE:</b></h4>
                     <h3 style="margin-top: 0.3em">{{teamScore}}</h3>
                   </div>
-                </div>                
+                </div>
               </div>
               <div class="col-md-6">
                 <div class="row">
@@ -155,21 +150,21 @@
                         <img id="div_energylevel" src={{energyLevel}} height="42" width="25">
                       </div>
                     </div>
-                  </div>    
-                </div>          
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- BADGES -->            
+            <!-- BADGES -->
             <div class="row">
               <div class="col-md-12">
                 <div class="row">
-                  {{#each currentRoomBadges}} 
+                  {{#each currentRoomBadges}}
                     <div class="col-md-3">
                       <img class="img-circle avatar avatar-original" style="-webkit-user-select:none; display:block; margin-top: 0.5em;" data-toggle="tooltip" data-placement="bottom" title='Badge {{this.name}}' src='{{this.image}}' height="60" width="60" alt="Room Badge">
                       <p class="lead" style="margin-bottom: 0.1em; ">
                         <h4>{{this.status}}</h4>
                       </p>
-                    </div>  
+                    </div>
                   {{/each}}
                   <div class="col-md-3">
                     <img class="img-circle avatar avatar-original" style="-webkit-user-select:none; display:block; margin-top: 0.5em;" data-toggle="tooltip" data-placement="bottom" title='Badge GANDALF' src='/academyBadges/gandalf.png' height="60" width="60" alt="Gandalf Badge">
@@ -178,9 +173,9 @@
                         <h4>Locked</h4>
                       {{else}}
                         <h4>Unlocked</h4>
-                      {{/if}} 
+                      {{/if}}
                     </p>
-                  </div>  
+                  </div>
 
                 </div>
               </div>
@@ -213,7 +208,7 @@
               </div>
             </div>
             -->
-            {{#with decisionExists}}   
+            {{#with decisionExists}}
               <div class="row">
                 <div class="col-md-12">
                   <p class="lead" style="font-size: 18px; margin-bottom: 0.1em; margin-top: 0.5em;">
@@ -272,14 +267,14 @@
 	    tooltip_bg = svgDocument.getElementById('tooltip_bg');
 	    popup = svgDocument.getElementById('popup');
     }
-  
+
     function ShowTooltip(evt, mouseovertext){
 
       tooltip.setAttributeNS(null,"x",evt.clientX-170);
       tooltip.setAttributeNS(null,"y",evt.clientY-110);
       tooltip.firstChild.data = mouseovertext;
       tooltip.setAttributeNS(null,"visibility","visible");
-    
+
       tooltip_bg.setAttributeNS(null,"x",evt.clientX-170);
       tooltip_bg.setAttributeNS(null,"y",evt.clientY-123);
       tooltip_bg.setAttributeNS(null,"visibility","visible");
@@ -298,7 +293,7 @@
   <script type="text/javascript">
     $('map').imageMapResize();
   </script>
-    
+
   <style>
     svg {
       background:url(Mapa_Kroilon.svg);
@@ -323,39 +318,39 @@
       stroke-width: 1;
       opacity: 0.85;
     }
-	
-	@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+
+	@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
 	  svg {
 	    display:none;
 	  }
-	  
+
 
 	  .app-layout{margin-left: auto;}
 	  #titleDiv { width:238px;}
 	}
-	
-	@media only screen and (min-device-width : 414px)  and (max-device-width : 736px) { 
+
+	@media only screen and (min-device-width : 414px)  and (max-device-width : 736px) {
 	  svg {
 	    display:none;
 	  }
-	  
+
     .app-layout{margin-left: auto;}
 	  #titleDiv { width:238px;}
 	}
 
-	@media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
+	@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	  svg {
 	    display:none;
 	  }
   .app-layout{margin-left: auto;}
 	 #titleDiv {width:238px;}
 	}
-	
-	@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
+
+	@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	  svg {
 	    display:none;
 	  }
-	  
+
     .app-layout{margin-left: auto;}
 	  #titleDiv { width:238px;}
 

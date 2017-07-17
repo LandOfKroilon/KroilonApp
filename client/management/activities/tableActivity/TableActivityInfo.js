@@ -13,16 +13,16 @@ Template.registerHelper('formatDate', function(date) {
 
 Template.TableActivityInfo.helpers({
 
-  academyBadges() {  
+  academyBadges() {
     let badges = Badges.find({}).fetch();
     return badges;
-    
+
   },
 
-  academyChallenges() {  
+  academyChallenges() {
     let challenges = Challenges.find({}).fetch();
     return challenges;
-    
+
   },
 
   teamPoints() {
@@ -30,30 +30,11 @@ Template.TableActivityInfo.helpers({
     var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
     var teamScore = latestAcademy.teamScore;
     var teamPoints = [];
-<<<<<<< HEAD
-    /*
-=======
-
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
-    $.each(teamScore, function(idx_scores, val_scores) 
-    {
-        teamPoints.push({"player":"Team", "nb": "Team", "name":val_scores.name, "points":val_scores.points + " ", "date":val_scores.date});
-      //  console.log(points_a);
-      //  console.log(points[0]);
-    });
-<<<<<<< HEAD
-    */
-    //sortArrOfObjectsByParam(teamPoints, "date", false);
-    return teamScore;
-  },
-  
-=======
 
     sortArrOfObjectsByParam(teamPoints, "date", false);
     return teamPoints;
   },
 
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
   playerPoints() {
 
     var latestAcademy = Academy.findOne({}, {sort: {date: -1, limit: 1}});
@@ -69,23 +50,18 @@ Template.TableActivityInfo.helpers({
       {
         $.each(scores, function(idx_scores, val_scores)
         {
-<<<<<<< HEAD
+
           points.push({"player":val_players.name, "nb":val_players.nb, "type":val_scores.countType, "name":val_scores.name, "points":val_scores.points, "pointsType":val_scores.pointsType, "date":val_scores.date});
-=======
+
           points.push({"player":val_players.name, "nb":val_players.nb, "type":val_scores.countType, "name":val_scores.name, "points":val_scores.points + " " + val_scores.pointsType, "date":val_scores.date});
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
-        //  console.log(points_a);
-        //  console.log(points[0]);
+
         });
-      }     
+      }
     });
 
-    //var nb = players[0].score;
-<<<<<<< HEAD
-    sortArrOfObjectsByParam(points, "player", true);
-=======
+
     sortArrOfObjectsByParam(points, "date", false);
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
+
     return points;
   }
 
@@ -95,7 +71,7 @@ const TABLE_ACTIVITY_ACTIVE_TEMPLATE_NAME = "TableActivityInfo";
 const NEW_ACTIVITY_ACTIVE_TEMPLATE_NAME = "NewActivityInfo";
 const EDIT_ACTIVITY_ACTIVE_TEMPLATE_NAME = "EditActivityInfo";
 
-Template.TableActivityInfo.events({   
+Template.TableActivityInfo.events({
 
   //Act when the personal performance board icon is clicked
   "click #addActivity" (event){
@@ -115,14 +91,14 @@ Template.TableActivityInfo.events({
   'click #viewActivity' (event){
     event.preventDefault();
     Modal.show('viewChallengeModal', this);
-    
+
   },
   */
 
   'click #deleteActivity' (event){
     event.preventDefault();
-    Modal.show('deleteActivityModal', this); 
-  } 
+    Modal.show('deleteActivityModal', this);
+  }
 
 });
 
