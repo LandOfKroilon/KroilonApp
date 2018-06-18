@@ -1,13 +1,11 @@
 # KroilonApp
 Repository of the official Kroilon App :)
-<<<<<<< HEAD
-=======
 
 https://kroilonapp.herokuapp.com/ (temporarily)
 
 ## How To Use
 
-Clone or download this repository. 
+Clone or download this repository.
 
 Open a Terminal (in Linux) or Command Prompt (in Windows) and navigate to the repository where you downloaded the code.
 
@@ -28,10 +26,9 @@ load(".database/initRooms.js");
 load(".database/initBadges.js");
 load(".database/initSecrets.js");
 load(".database/initHistory.js");
-load(".database/init.Activitiesjs");
+load(".database/initActivities.js");
 ```
 
 
 
 
->>>>>>> cdd9b7c4adaf57c67523860365787fa884e50298
